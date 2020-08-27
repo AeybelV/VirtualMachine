@@ -1,0 +1,5 @@
+PUSH $5
+PUSH $9
+ADD
+PRINT
+HLT
