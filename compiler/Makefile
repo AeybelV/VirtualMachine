@@ -5,7 +5,7 @@ PROD_FLAGS = -Wall -fexceptions --static -static-libgcc -static-libstdc++
 SRC = *.c
 
 build_debug:
-	$(CC)  $(DEBUG_FLAGS) $(SRC)  -o  compiler_debug.exe
+	$(CC)  $(DEBUG_FLAGS) $(SRC)  -o  cake_compiler_debug.exe
 	mv cake_compiler_debug.exe ../compiler_debug.exe
 
 
