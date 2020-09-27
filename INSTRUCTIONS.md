@@ -14,7 +14,7 @@ The executables run by the VM all contain this header
 ## Language Op Codes
 
 | Instruction   | Usage          | Description
-| --------------| ------ ------- | ------------
+| --------------| ---------------| ------------
 | HLT           |                |Halts program
 | NOP           |                | No Operation
 | PUSH          | PUSH $VALUE    |Pushes a number to the stack
