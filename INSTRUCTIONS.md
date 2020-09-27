@@ -2,7 +2,7 @@
 
 ## Executable Header
 
-Headerer of all exeutables run by the VM.
+The executables run by the VM all contain this header
 
 | Name  | Description| Size
 |-------|------------|------
@@ -13,14 +13,14 @@ Headerer of all exeutables run by the VM.
 
 ## Language Op Codes
 
-| Instruction   | Description
-| --------------| ------------
-| HLT           | Halts program
-| NOP           | No Operation
-| PUSH          | Pushes a number to the stack
-| POP           | Pops a number off the stack
-| ADD           | Pops number off stack, adds, and pushes result
-| SUB           | Pops number off stack, subtracts, and pushes result
-| MUL           | Pops number off stack, multiplies, and pushes result
-| DIV           | Pops number off stack, divides, and pushes result
-| PRINT         | Prints the last value off the stack
+| Instruction   | Usage          | Description
+| --------------| ------ ------- | ------------
+| HLT           |                |Halts program
+| NOP           |                | No Operation
+| PUSH          | PUSH $VALUE    |Pushes a number to the stack
+| POP           | POP $VALUE     |Pops a number off the stack
+| ADD           |                |Pops number off stack, adds, and pushes result
+| SUB           |                |Pops number off stack, subtracts, and pushes result
+| MUL           |                |Pops number off stack, multiplies, and pushes result
+| DIV           |                |Pops number off stack, divides, and pushes result
+| PRINT         |                |Prints the last value off the stack
