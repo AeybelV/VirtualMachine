@@ -1,7 +1,31 @@
-# NoNameLang
+# CakeLang
 
-NoName is a programming language that I have written as a educational experience and interesting side project for me. I have called it NoName simply because I couldn't think of a name, but I will do so in the future.
+CakeLang is an assembly-like programming language that I have written as an educational experience and interesting side project for me.
 
-The language compiles source files into the NoNameLang bytecode, which is then run on the NoNameLang Virtual Machine, which is the runtime for executing NoNameLang bytecode. The NNVM is designed to be a stack based machine.
+The language is compiled into bytecode that can be executed by the CakeLang Virtual Machine, which is the runtime for executing CakeLang bytecode.
 
-Currently the compiler is a work in progress. The compiler can read a file passed to it on the command line and prints out tokens. I will also get to work on the runtime soon. A test file called "test.nn" can be read by the compiler.
+The CLVM is designed to be a stack based machine. At the moment it support only integers, and for now will only deal with 8 bit numbers.
+
+## Details
+
+- [CakeLang](#cakelang)
+  - [Details](#details)
+  - [TODO's](#todos)
+    - [Compiler](#compiler)
+    - [Runtime](#runtime)
+
+[INSTRUCTIONS.md](INSTRUCTIONS.md) contains details about the CakeLang executable and contains a table of opcodes.
+
+## TODO's
+
+### Compiler
+
+- [x] Create a basic lexer
+- [ ] Write the token parser
+- [ ] Compile parsed tokens to CakeLang bytecode
+- [ ] Implement basic control flow instructions
+
+### Runtime
+
+- [ ] Needs to be written
+- [ ] Implement basic control flow instructions
