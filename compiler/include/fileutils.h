@@ -1,8 +1,12 @@
-#ifndef FILETUILS_H
-#define FILETUILS_H
+#ifndef FILEUTILS_H
+#define FILEUTILS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-char* readFile(const char *path);
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include <vector>
+
+int readFile(const char *path,std::vector<std::string> *fileContents);
 
 #endif

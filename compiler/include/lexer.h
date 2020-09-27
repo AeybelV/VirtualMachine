@@ -1,10 +1,14 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-#include <stdio.h>
-#include "token.h"
-#include "instructions.h"
+#include <vector>
+#include <string>
+#include <iostream>
+#include <sstream>
 
-int tokenize(char *source);
+#include "instructions.h"
+#include "token.h"
+
+int tokenize(std::vector<std::string> *fileContents,std::vector<Token> *tokens);
 
 #endif

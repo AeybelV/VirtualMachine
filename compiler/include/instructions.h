@@ -1,5 +1,8 @@
 #ifndef INSTRUCTIONS_H
 #define INSTRUCTIONS_H
+
+#include <string>
+
 enum INSTRUCTIONS{
   HLT,
   NOP,
@@ -12,5 +15,5 @@ enum INSTRUCTIONS{
   PRINT  
 };
 
-int isInstruction(char *text);
+int isInstruction(std::string text);
 #endif
