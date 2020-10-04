@@ -1,6 +1,6 @@
 #include "include/parser.h"
 
-int parse(std::vector<Token> *tokens,std::vector<short> *instructionList)
+int parse(std::vector<Token> *tokens,std::vector<char> *instructionList)
 {
     
     std::vector<Token>::iterator t = tokens->begin(); // The current token
@@ -48,6 +48,8 @@ int parse(std::vector<Token> *tokens,std::vector<short> *instructionList)
             std::cout << "No instruction provided on line " << lineTokens[0]->line << std::endl;
         }
 
+        // TODO: Check if the opcode has the the correct operand types passed to it
+
         // The instructions that has been parsed on the line then is appended to the instructionList.
         // The instructionList will be then later written to a file after done parsing
         for(int i = 0; i<lineTokens.size();i++)
@@ -56,10 +58,10 @@ int parse(std::vector<Token> *tokens,std::vector<short> *instructionList)
             // TODO: In the future, I plan to implement variable instruction length depending on the "bit mode" defined in the executable header
             if(lineTokens[i]->type == TT_OPCODE)
             {
-                instructionList->push_back((short) lineTokens[i]->instruction); // Appends the 8 bit opcode 
+                instructionList->push_back((char) lineTokens[i]->instruction); // Appends the 8 bit opcode 
             }
             else{ // Is followed by the instruction operands
-                instructionList->push_back((short) lineTokens[i]->data); // TODO: At the moment, this only account for a single operand as the most operands of the instruction i've so far implemented is 1. However there will be instructions with more than 1 operands.
+                instructionList->push_back((char) lineTokens[i]->data); // TODO: At the moment, this only account for a single operand as the most operands of the instruction i've so far implemented is 1. However there will be instructions with more than 1 operands.
             }
         }
     }

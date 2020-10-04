@@ -26,9 +26,12 @@ int main(int argc, char** argv)
     int lexResults = tokenize(fileContents,tokens);
     if(lexResults){return 1;} // Exit if there is an  error tokenizing
 
-    std::vector<short> *instructionList = new std::vector<short>;
+    std::vector<char> *instructionList = new std::vector<char>;
     int parseResults = parse(tokens,instructionList);
     if(parseResults){return 1;} // Exit if there is an error parsing
-    
+
+    int writeResults = writeExecutable(instructionList);
+    if(writeResults){return 1;} // Exit if there is an error writing the executable
+
     return 0;
 }

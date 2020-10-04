@@ -21,8 +21,8 @@ The CLVM is designed to be a stack based machine. At the moment it support only 
 ### Compiler
 
 - [x] Create a basic lexer
-- [ ] Write the token parser
-- [ ] Compile parsed tokens to CakeLang bytecode
+- [x] Write the token parser
+- [x] Compile parsed tokens to CakeLang bytecode
 - [ ] Implement basic control flow instructions
 
 ### Runtime

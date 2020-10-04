@@ -19,3 +19,17 @@ int readFile(const char *path,std::vector<std::string> *fileContents){
         return 1;
     }
 }
+
+int writeExecutable(std::vector<char> *instructionList){
+    std::ofstream compiledExecutable("./output.cke", std::ios::binary);
+    if(!compiledExecutable)
+    {
+        std::cout << "Compile Error: Could not create file" << std::endl;
+        return 1;
+    }
+
+    std::ostream_iterator<char> compiledExecutable_iterator(compiledExecutable);
+    std::copy(instructionList->begin(),instructionList->end(),compiledExecutable_iterator);
+
+    return 0;
+}
