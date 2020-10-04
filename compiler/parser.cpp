@@ -63,6 +63,10 @@ int parse(std::vector<Token> *tokens,std::vector<char> *instructionList)
             else{ // Is followed by the instruction operands
                 instructionList->push_back((char) lineTokens[i]->data); // TODO: At the moment, this only account for a single operand as the most operands of the instruction i've so far implemented is 1. However there will be instructions with more than 1 operands.
             }
+
+            if(lineTokens.size() == 1){
+                instructionList->push_back('\0'); // Instructions with zero operands have the rest of the instruction length have a padding of zeros
+            }
         }
     }
     return 0;
