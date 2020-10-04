@@ -1,6 +1,7 @@
 #include "include/fileutils.h"
 #include "include/lexer.h"
 #include "include/token.h"
+#include "include/parser.h"
 
 #include <iostream>
 #include <vector>
@@ -23,5 +24,11 @@ int main(int argc, char** argv)
 
     std::vector<Token> *tokens = new std::vector<Token>;
     int lexResults = tokenize(fileContents,tokens);
+    if(lexResults){return 1;} // Exit if there is an  error tokenizing
+
+    std::vector<short> *instructionList = new std::vector<short>;
+    int parseResults = parse(tokens,instructionList);
+    if(parseResults){return 1;} // Exit if there is an error parsing
+    
     return 0;
 }

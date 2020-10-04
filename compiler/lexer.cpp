@@ -22,7 +22,7 @@ bool isNumber(std::string text)
         char c = text[i];
         if(c < 48 || c > 57)
         {
-            if(i != 0 && text[0] != '$') // Checks to see if the first character is denoting a immediate value
+            if(text[0] != '$') // Checks to see if the first character is denoting a immediate value
             {
                 return false;
             }
@@ -36,7 +36,7 @@ Token getToken(std::string text){
     int i = isInstruction(text); // Checks if the string corresponds to a instruction, and returns the enum for the instruction.
     if(i != -1) // isInstruction() returns a -1 if the text isn't a instruction
     {
-        t.type = TT_INSTRUCTION;  // Sets the token type to instruction
+        t.type = TT_OPCODE;  // Sets the token type to instruction
         t.instruction = i; // Sets the code of the instruction.
     }
     else if(containsOnlyAlphabetCharacters(text)) // Checks if the string is a identifier
@@ -56,7 +56,7 @@ Token getToken(std::string text){
     return t; // Returns the token
 }
 
-void tokenizeLine(std::string currentLine,int line)
+void tokenizeLine(std::string currentLine,int line,std::vector<Token> *tokens)
 {
     // Splits the string by spaces and tokenizes each item
     std::string item;
@@ -65,7 +65,7 @@ void tokenizeLine(std::string currentLine,int line)
     {
         Token t = getToken(item); // Gets the token of the item
         t.line = line; // Sets the line of the token to the line it is located
-
+        tokens->push_back(t);
         // std::cout << item << ": " << t.type << std::endl; // Used for debugging purposes
     }
 
@@ -79,7 +79,7 @@ int tokenize(std::vector<std::string> *fileContents,std::vector<Token> *tokens)
     for(std::vector<std::string>::iterator currentLine = fileContents->begin(); currentLine != fileContents->end(); currentLine++)
     {
         line++; // Increments the line counters
-        tokenizeLine(*currentLine,line); // Tokenizes the contents on each line.
+        tokenizeLine(*currentLine,line,tokens); // Tokenizes the contents on each line.
     }
     return 0; // Returns 0 if no error in tokenizing
 }

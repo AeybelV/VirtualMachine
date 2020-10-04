@@ -13,7 +13,7 @@ class Token{
 };
 
 enum TokenType{
-    TT_INSTRUCTION,
+    TT_OPCODE,
     TT_IDENTIFIER,
     TT_NUMBER,
     TT_UNKNOWN

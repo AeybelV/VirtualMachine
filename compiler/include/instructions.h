@@ -16,4 +16,5 @@ enum INSTRUCTIONS{
 };
 
 int isInstruction(std::string text);
+int getNumberOfOperands(int instruction);
 #endif
