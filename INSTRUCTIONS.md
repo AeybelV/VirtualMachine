@@ -18,7 +18,7 @@ The executables run by the VM all contain this header
 | HLT           |                |Halts program
 | NOP           |                | No Operation
 | PUSH          | PUSH $VALUE    |Pushes a number to the stack
-| POP           | POP $VALUE     |Pops a number off the stack
+| POP           | POP            |Pops a number off the stack
 | ADD           |                |Pops number off stack, adds, and pushes result
 | SUB           |                |Pops number off stack, subtracts, and pushes result
 | MUL           |                |Pops number off stack, multiplies, and pushes result
