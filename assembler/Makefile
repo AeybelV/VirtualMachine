@@ -11,5 +11,5 @@ build_debug:
 
 build_production:
 	$(CC)  $(PROD_FLAGS) $(SRC)  -o  assembler.exe
-	mv assembler.exe ../assembler.exe
+	mv assembler.exe ../bake_cake.exe
 
