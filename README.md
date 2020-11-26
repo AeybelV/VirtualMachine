@@ -19,7 +19,7 @@ The CLVM is designed to be a stack based machine. At the moment it support only 
 
 ## Building
 
-Build the assembler by running `make build_assembler_production` and the runtime by running `build_runtime_production`.
+Build the assembler by running `make build_assembler_production` and the runtime by running `make build_runtime_production`.
 
 Test out the language yourself by assembling the test.cks file.
 
