@@ -3,4 +3,5 @@
 #include "../../include/machine.h"
 #include "stack.h"
 void PrintInteger(MachineState *vm);
+void PrintCharacter(MachineState *vm);
 #endif

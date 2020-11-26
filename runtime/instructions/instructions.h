@@ -19,7 +19,7 @@ void (*VM_INSTRUCTIONS[256])(MachineState *vm) = {
     IntegerMultiplicationInstruction,
     IntegerDivisionInstruction,
     PrintInteger,
-    UnimplementedInstruction,
+    PrintCharacter,
     UnimplementedInstruction,
     UnimplementedInstruction,
     UnimplementedInstruction,

@@ -13,3 +13,4 @@
 | iMUL (x06)          |                | Pops last two integers off stack, multiplies, and pushes result.
 | iDIV (x07)          |                | Pops last two integers off stack, TT_OPCODEides, and pushes result.
 | iPRINT (x08)        |                | Prints the last integer off the stack, does not pop.
+| cPRINT (x09)        |                | Prints the last character off the stack, does not pop.

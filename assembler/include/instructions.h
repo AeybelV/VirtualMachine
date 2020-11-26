@@ -12,7 +12,8 @@ enum INSTRUCTIONS{
   iSUB,
   iMUL,
   iDIV,
-  iPRINT  
+  iPRINT,
+  cPRINT
 };
 
 int isInstruction(std::string text);

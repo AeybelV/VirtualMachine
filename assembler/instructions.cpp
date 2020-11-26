@@ -31,6 +31,9 @@ int getNumberOfOperands(int instruction)
         case iPRINT:
             return 0;
             break;
+        case cPRINT:
+            return 0;
+            break;
         default:
             return -1;
             break;
@@ -64,6 +67,9 @@ int isInstruction(std::string text){
     }
     else if(text == "iPRINT"){
         return iPRINT;
+    }
+    else if(text == "cPRINT"){
+        return cPRINT;
     }
     return -1;
 }
