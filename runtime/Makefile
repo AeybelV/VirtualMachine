@@ -2,7 +2,7 @@ CC = g++
 DEBUG_FLAGS = -Wall -fexceptions -g
 PROD_FLAGS = -Wall -fexceptions --static -static-libgcc -static-libstdc++
 
-SRC = *.c
+SRC = *.c instructions/*.c
 
 build_debug:
 	$(CC)  $(DEBUG_FLAGS) $(SRC)  -o  cake_runtime_debug.exe

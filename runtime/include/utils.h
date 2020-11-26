@@ -3,8 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-char *getProgram(const char *path);
+short *getProgram(const char *path);
 
 #endif
