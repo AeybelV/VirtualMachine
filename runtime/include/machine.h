@@ -1,7 +1,6 @@
 #ifndef MACHINE_H
 #define MACHINE_H
 #include <stdio.h>
-#include <cstring>
 
 typedef struct MachineState{
     int pc;

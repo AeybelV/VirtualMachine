@@ -1,6 +1,6 @@
-CC = g++
+CC = gcc
 DEBUG_FLAGS = -Wall -fexceptions -g
-PROD_FLAGS = -Wall -fexceptions --static -static-libgcc -static-libstdc++
+PROD_FLAGS = -Wall -fexceptions
 
 SRC = *.c instructions/*.c
 
