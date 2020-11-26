@@ -45,7 +45,7 @@ int parse(std::vector<Token> *tokens,std::vector<char> *instructionList)
             }
         }
         else{
-            std::cout << "No instruction provided on line " << lineTokens[0]->line << std::endl;
+            std::cout << "Invalid Instruction on line " << lineTokens[0]->line << std::endl;
         }
 
         // TODO: Check if the opcode has the the correct operand types passed to it

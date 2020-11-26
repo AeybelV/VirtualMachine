@@ -8,10 +8,10 @@ enum INSTRUCTIONS{
   NOP,
   PUSH,
   POP,
-  ADD,
-  SUB,
-  MUL,
-  DIV,
+  iADD,
+  iSUB,
+  iMUL,
+  iDIV,
   PRINT  
 };
 

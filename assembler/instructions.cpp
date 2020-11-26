@@ -16,16 +16,16 @@ int getNumberOfOperands(int instruction)
         case POP:
             return 0;
             break;
-        case ADD:
+        case iADD:
             return 0;
             break;
-        case SUB:
+        case iSUB:
             return 0;
             break;
-        case MUL:
+        case iMUL:
             return 0;
             break;
-        case DIV:
+        case iDIV:
             return 0;
             break;
         case PRINT:
@@ -50,17 +50,17 @@ int isInstruction(std::string text){
     else if(text == "POP"){
         return POP;
     }
-    else if(text == "ADD"){
-        return ADD;
+    else if(text == "iADD"){
+        return iADD;
     }
-    else if(text == "SUB"){
-        return SUB;
+    else if(text == "iSUB"){
+        return iSUB;
     }
-    else if(text == "MUL"){
-        return MUL;
+    else if(text == "iMUL"){
+        return iMUL;
     }
-    else if(text == "DIV"){
-        return DIV;
+    else if(text == "iDIV"){
+        return iDIV;
     }
     else if(text == "PRINT"){
         return PRINT;
