@@ -28,7 +28,7 @@ int getNumberOfOperands(int instruction)
         case iDIV:
             return 0;
             break;
-        case PRINT:
+        case iPRINT:
             return 0;
             break;
         default:
@@ -62,8 +62,8 @@ int isInstruction(std::string text){
     else if(text == "iDIV"){
         return iDIV;
     }
-    else if(text == "PRINT"){
-        return PRINT;
+    else if(text == "iPRINT"){
+        return iPRINT;
     }
     return -1;
 }
