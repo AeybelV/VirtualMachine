@@ -5,11 +5,11 @@ PROD_FLAGS = -Wall -fexceptions --static -static-libgcc -static-libstdc++
 SRC = *.cpp
 
 build_debug:
-	$(CC)  $(DEBUG_FLAGS) $(SRC)  -o  cake_compiler_debug.exe
-	mv cake_compiler_debug.exe ../compiler_debug.exe
+	$(CC)  $(DEBUG_FLAGS) $(SRC)  -o  cake_assembler_debug.exe
+	mv cake_assembler_debug.exe ../assembler_debug.exe
 
 
 build_production:
-	$(CC)  $(PROD_FLAGS) $(SRC)  -o  compiler.exe
-	mv compiler.exe ../compiler.exe
+	$(CC)  $(PROD_FLAGS) $(SRC)  -o  assembler.exe
+	mv assembler.exe ../assembler.exe
 
