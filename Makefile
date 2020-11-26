@@ -2,11 +2,11 @@ all:
 	echo None
 
 
-build_compiler_debug:
-	$(MAKE) -C compiler build_debug
+build_assembler_debug:
+	$(MAKE) -C assembler build_debug
 
-build_compiler_production:
-	$(MAKE) -C compiler build_production
+build_assembler_production:
+	$(MAKE) -C assembler build_production
 
 build_runtime_debug:
 	$(MAKE) -C runtime build_debug
